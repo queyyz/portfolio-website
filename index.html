@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Portfolio</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" data-lang-key="nav_home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-lang-key="nav_about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-lang-key="nav_skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-lang-key="nav_projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-lang-key="nav_contact">Contact</a></li>
+            </ul>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="zh">中文 (Chinese)</option>
+                    <option value="ko">한국어 (Korean)</option>
+                    <option value="ja">日本語 (Japanese)</option>
+                </select>
+            </div>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-lang-key="hero_heading">Yo!!, I'm<span class="highlight">queyyz</span></h1>
+            <p class="hero-subtitle" data-lang-key="hero_subtitle">Full Stack Developer</p>
+            <p class="hero-description" data-lang-key="hero_description">I create beautiful and functional web applications</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary" data-lang-key="hero_button_work">View My Work</a>
+                <a href="#contact" class="btn btn-secondary" data-lang-key="hero_button_contact">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://i.pinimg.com/736x/20/63/9c/20639c5757cc36bcb7f0541e907a0fc0.jpg" alt="Profile Picture">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-lang-key="about_title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-lang-key="about_description">I am a passionate Full Stack Developer with experience in creating web applications using modern technologies. I love solving complex problems and learning new technologies.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3 data-lang-key="about_exp_years">9+</h3>
+                            <p data-lang-key="about_exp_text">Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 data-lang-key="about_projects_count">99+</h3>
+                            <p data-lang-key="about_projects_text">Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 data-lang-key="about_clients_count">999+</h3>
+                            <p data-lang-key="about_clients_text">Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.pinimg.com/1200x/6f/1a/6e/6f1a6ec0ae92b2daaf42410665479fdd.jpg" alt="About Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-lang-key="skills_title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <h3 data-lang-key="skill_html_title">HTML5</h3>
+                    <p data-lang-key="skill_html_description">Semantic markup and modern HTML5 features</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3 data-lang-key="skill_css_title">CSS3</h3>
+                    <p data-lang-key="skill_css_description">Responsive design and modern CSS techniques</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js-square"></i>
+                    <h3 data-lang-key="skill_js_title">JavaScript</h3>
+                    <p data-lang-key="skill_js_description">ES6+ features and modern JavaScript</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react"></i>
+                    <h3 data-lang-key="skill_react_title">React</h3>
+                    <p data-lang-key="skill_react_description">Component-based UI development</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-node-js"></i>
+                    <h3 data-lang-key="skill_node_title">Node.js</h3>
+                    <p data-lang-key="skill_node_description">Server-side JavaScript development</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <h3 data-lang-key="skill_mongo_title">MongoDB</h3>
+                    <p data-lang-key="skill_mongo_description">NoSQL database management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-lang-key="projects_title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://i.pinimg.com/1200x/02/1d/83/021d832b5828fdae1246db2f9fe2f2cd.jpg" alt="Project 1">
+                    <div class="project-info">
+                        <h3 data-lang-key="project1_title">E-commerce Website</h3>
+                        <p data-lang-key="project1_description">A full-stack e-commerce solution built with React and Node.js</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small" data-lang-key="project_demo_btn">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-secondary" data-lang-key="project_github_btn">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://i.pinimg.com/736x/2d/09/bb/2d09bbe1da532ae2c73e572d7aca1f52.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3 data-lang-key="project2_title">Task Management App</h3>
+                        <p data-lang-key="project2_description">A collaborative task management application with real-time updates</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small" data-lang-key="project_demo_btn">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-secondary" data-lang-key="project_github_btn">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="https://i.pinimg.com/736x/60/25/e7/6025e7a99615bb5fd7e4ec1899c5e664.jpg" alt="Project 3">
+                    <div class="project-info">
+                        <h3 data-lang-key="project3_title">Weather App</h3>
+                        <p data-lang-key="project3_description">A responsive weather application with location-based forecasts</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-small" data-lang-key="project_demo_btn">Live Demo</a>
+                            <a href="#" class="btn btn-small btn-secondary" data-lang-key="project_github_btn">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-lang-key="contact_title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-lang-key="contact_work_together_heading">Let's work together</h3>
+                    <p data-lang-key="contact_work_together_description">I'm always interested in hearing about new projects and opportunities.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span data-lang-key="contact_email">melovekamisatoayaka@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span data-lang-key="contact_phone">+99 99 999 9999</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-lang-key="contact_location">Bangkok, Thailand</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"  data-i18n="send_message">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-lang-key="footer_text">&copy; 2025 queyyz. Software Engineering, RMUTL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

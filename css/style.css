@@ -1,0 +1,555 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Sakura Palette */
+    --sakura-pink-light: #FFEDED; /* Very light, almost white pink */
+    --sakura-pink-soft: #FDE8ED; /* Soft, delicate pink */
+    --sakura-pink-medium: #F4C2C2; /* Medium, gentle pink */
+    --sakura-pink-dark: #E6A7A7; /* Slightly deeper pink */
+    --sakura-purple: #B082BB; /* A muted purple-pink hue, like fading blossoms */
+    --sakura-leaf-green: #A3C9A8; /* Soft green for accents, like fresh leaves */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    background-color: var(--sakura-pink-light); /* Lightest background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95); /* Keep it light and airy */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--sakura-purple); /* Logo stands out with a deeper tone */
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0 20px 0 0; /* Ensures space for the language switcher */
+}
+
+.nav-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--sakura-pink-medium); /* Soft pink hover */
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Language Switcher Styling */
+.language-switcher {
+    margin-left: 20px;
+}
+
+.language-switcher select {
+    padding: 8px 12px;
+    border: 1px solid var(--sakura-pink-medium); /* Soft border */
+    border-radius: 5px;
+    background-color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13%205.4L146.2%20202.7%2018.6%2074.8a17.6%2017.6%200%200%200-25.3%2023.8l130.4%20129%20130.4-129c6.5-6.6%206.4-17.2-.2-23.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+.language-switcher select:focus {
+    outline: none;
+    border-color: var(--sakura-purple); /* Focus border matches logo */
+    box-shadow: 0 0 0 2px rgba(var(--sakura-purple-rgb-value), 0.2); /* Adjust var to actual RGB if needed, or use a fixed color */
+}
+
+:root {
+    --primary-color-rgb-value: 176, 130, 187;
+    /* ... other variables ... */
+}
+
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 20px 50px;
+    /* Sakura gradient: gentle transition from light to slightly deeper pink/purple */
+    background: linear-gradient(135deg, var(--sakura-pink-light) 0%, var(--sakura-pink-medium) 40%, var(--sakura-purple) 100%);
+    color: var(--white);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--black); /* Black for sharp contrast on light background text */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--sakura-pink-dark); /* Deeper pink for primary action */
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--sakura-purple); /* Hover to purple */
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--text-dark); /* Text becomes dark on white hover */
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--sakura-purple); /* Section titles use the deep purple-pink */
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+    background: var(--sakura-pink-soft); /* Soft pink background */
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    color: var(--sakura-pink-dark); /* Stats numbers in a darker pink */
+    margin-bottom: 0.5rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 100px 0;
+    background-color: var(--white); /* White background for contrast */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-item {
+    background: var(--sakura-pink-soft); /* Skill cards in a soft pink */
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    background: var(--sakura-pink-medium); /* Slightly darker on hover */
+}
+
+.skill-item i {
+    font-size: 3rem;
+    color: var(--sakura-purple); /* Icons in the deep purple-pink */
+    margin-bottom: 1rem;
+}
+
+.skill-item h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* Projects Section */
+.projects {
+    padding: 100px 0;
+    background: var(--sakura-pink-light); /* Lightest pink background */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.project-info p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 0;
+    background-color: var(--white); /* White background for contact */
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--sakura-purple); /* Contact heading in purple-pink */
+}
+
+.contact-info p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.contact-details {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-item i {
+    font-size: 1.2rem;
+    color: var(--sakura-pink-dark); /* Contact icons in darker pink */
+    margin-right: 1rem;
+    width: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--sakura-pink-medium); /* Social links in medium pink */
+    color: var(--white);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--sakura-purple); /* Hover to purple */
+}
+
+/* Contact Form */
+.contact-form {
+    background: var(--sakura-pink-soft); /* Form background in soft pink */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Lighter shadow */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--sakura-pink-medium); /* Form input border in medium pink */
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--sakura-purple); /* Focus border in purple-pink */
+}
+
+/* Footer */
+.footer {
+    background: var(--sakura-purple); /* Deep purple-pink for the footer */
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 120px 20px 50px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        margin-bottom: 2rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+}
